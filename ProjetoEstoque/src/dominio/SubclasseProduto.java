@@ -14,12 +14,12 @@ public class SubclasseProduto extends BaseParamentro {
     this.codigoClasse = codigoClasse;
   }
 
-  public SubclasseProduto(int codigo, String descricao, LocalDate dataDeInclusao, int codigoClasse) {
-    super(codigo, descricao, dataDeInclusao);
-    this.codigoClasse = codigoClasse;
+  public SubclasseProduto() {
+    super();
   }
 
-  public SubclasseProduto(int codigoClasse) {
+  public SubclasseProduto(int codigo, String descricao, LocalDate dataDeInclusao, int codigoClasse) {
+    super(codigo, descricao, dataDeInclusao);
     this.codigoClasse = codigoClasse;
   }
 
