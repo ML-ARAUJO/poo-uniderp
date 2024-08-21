@@ -3,8 +3,8 @@ package dominio;
 import java.time.LocalDate;
 
 public class ClasseProduto extends BaseParamentro {
-  public String getDataDeInclusao;
 
+  // construtor padrão(sem parametro) e com parametro
   public ClasseProduto() {
     super();
   }

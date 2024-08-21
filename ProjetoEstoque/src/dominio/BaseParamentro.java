@@ -4,10 +4,13 @@ import java.time.LocalDate;
 
 public abstract class BaseParamentro {
 
+  // modificador, tipo e nome da variavel
+
   protected int codigo;
   protected String descricao;
   protected LocalDate dataDeInclusao;
 
+  // metodos ler e buscar
   public int getCodigo() {
     return codigo;
   }
@@ -32,6 +35,7 @@ public abstract class BaseParamentro {
     this.dataDeInclusao = dataDeInclusao;
   }
 
+  // construtur/paramentros
   public BaseParamentro() {
   }
 
