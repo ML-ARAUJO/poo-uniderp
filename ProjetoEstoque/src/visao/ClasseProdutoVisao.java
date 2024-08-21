@@ -15,9 +15,10 @@ public class ClasseProdutoVisao {
     System.out.println("Classe de Produto:");
     System.out.println("Codigo: " + cp1.getCodigo());
     System.out.println("Descrição: " + cp1.getDescricao());
-    System.out.println("Data de Inclusão: " + cp1.getDataDeInclusao);
-    
-    ClasseProduto cp2 = new ClasseProduto(2,"Bebidas", LocalDate.now());
+    System.out.println("Data de Inclusão: " + cp1.getDataDeInclusao());
+    System.out.println();
+
+    ClasseProduto cp2 = new ClasseProduto(2, "Bebidas", LocalDate.now());
     System.out.println("Codigo: " + cp2.getCodigo());
     System.out.println("Descrição: " + cp2.getDescricao());
     System.out.println("Data de Inclusão: " + cp2.getDataDeInclusao());

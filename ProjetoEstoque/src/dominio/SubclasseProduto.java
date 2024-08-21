@@ -1,12 +1,26 @@
 package dominio;
 
-public class SubclasseProduto extends BaseParamentro{
-  
+import java.time.LocalDate;
+
+public class SubclasseProduto extends BaseParamentro {
+
   private int codigoClasse;
 
-  
+  public int getCodigoClasse() {
+    return codigoClasse;
+  }
+
+  public void setCodigoClasse(int codigoClasse) {
+    this.codigoClasse = codigoClasse;
+  }
+
+  public SubclasseProduto(int codigo, String descricao, LocalDate dataDeInclusao, int codigoClasse) {
+    super(codigo, descricao, dataDeInclusao);
+    this.codigoClasse = codigoClasse;
+  }
+
+  public SubclasseProduto(int codigoClasse) {
+    this.codigoClasse = codigoClasse;
+  }
+
 }
-
-
-
-
