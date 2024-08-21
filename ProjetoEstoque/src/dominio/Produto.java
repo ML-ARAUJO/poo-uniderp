@@ -23,6 +23,10 @@ public class Produto extends BaseParamentro {
     this.valor = valor;
   }
 
+  public Produto() {
+    super();
+  }
+
   public Produto(int codigo, String descricao, LocalDate dataDeInclusao, int codigoSubClasse, double valor) {
     super(codigo, descricao, dataDeInclusao);
     this.codigoSubClasse = codigoSubClasse;
