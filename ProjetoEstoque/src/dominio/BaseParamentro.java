@@ -2,15 +2,16 @@ package dominio;
 
 import java.time.LocalDate;
 
+//Classe abstrata
 public abstract class BaseParamentro {
 
-  // modificador, tipo e nome da variavel
+  // modificador, tipo e nome da variavel/atributos
 
   protected int codigo;
   protected String descricao;
   protected LocalDate dataDeInclusao;
 
-  // metodos ler e buscar
+  // propriedades
   public int getCodigo() {
     return codigo;
   }

@@ -3,10 +3,11 @@ package dominio;
 import java.time.LocalDate;
 
 public class Produto extends BaseParamentro {
-
+  // atribudos
   private int codigoSubClasse;
   private double valor;
 
+  // propriedades
   public int getCodigoSubClasse() {
     return codigoSubClasse;
   }
@@ -23,6 +24,7 @@ public class Produto extends BaseParamentro {
     this.valor = valor;
   }
 
+  // construtur/paramentros
   public Produto() {
     super();
   }
