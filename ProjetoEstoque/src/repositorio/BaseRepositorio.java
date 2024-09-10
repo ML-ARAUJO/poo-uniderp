@@ -6,6 +6,7 @@ public abstract class BaseRepositorio<TDominio> {
 
   protected ArrayList<TDominio> dados;
 
+  // BREAD
   public ArrayList<TDominio> Browse() {
     return this.dados;
   }
