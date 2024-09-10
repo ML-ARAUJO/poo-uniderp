@@ -7,6 +7,7 @@ public class ClasseProdutoRepo extends BaseRepositorio<ClasseProduto> {
 
   private ClasseProdutoFakeDB db;
 
+  // Contrutor para buscar os dados da lista
   public ClasseProdutoRepo() {
     this.db = new ClasseProdutoFakeDB();
     this.dados = this.db.getTabela();
@@ -35,8 +36,9 @@ public class ClasseProdutoRepo extends BaseRepositorio<ClasseProduto> {
 
   @Override
   public ClasseProduto Add(ClasseProduto instancia) {
-    ClasseProduto cp = this.dados.getLast();
-    int proxChave = cp.getCodigo() + 1;
+    // ClasseProduto cp = this.dados.getLast();
+    // int proxChave = cp.getCodigo() + 1;
+    int proxChave = this.dados.getLast().getCodigo() + 1; // otimização do código acima
     instancia.setCodigo(proxChave);
     this.dados.add(instancia);
     return instancia;
