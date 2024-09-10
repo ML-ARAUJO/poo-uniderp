@@ -8,9 +8,11 @@ import repositorio.ClasseProdutoRepo;
 public class ClasseProdutoVisao {
 
   // metodo exibir da Classe produto
+
   public void Exibir() {
     ClasseProdutoRepo repo = new ClasseProdutoRepo();
-    ArrayList<ClasseProduto> lista = repo.Browse();
+
+    ArrayList<ClasseProduto> lista = repo.Browse(); // se for CRUD em vez de repo.Browser > repo.getTabela();
     for (ClasseProduto cp : lista) {
       this.Imprimir(cp);
 
