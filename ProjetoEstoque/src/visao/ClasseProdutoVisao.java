@@ -22,6 +22,6 @@ public class ClasseProdutoVisao {
     System.out.println("Codigo: " + alvo.getCodigo());
     System.out.println("Descrição: " + alvo.getDescricao());
     System.out.println("Data de Inclusão: " + alvo.getDataDeInclusao());
-    System.out.println();
+    System.out.println("---------------------------------------------");
   }
 }
