@@ -9,6 +9,7 @@ public abstract class BaseFakeDB<TDominio> {
   protected ArrayList<TDominio> tabela;
 
   // propriedade de somente leitura (Reand-only)
+
   public ArrayList<TDominio> getTabela() {
     return this.tabela;
   }
