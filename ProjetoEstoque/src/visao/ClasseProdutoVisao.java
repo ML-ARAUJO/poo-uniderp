@@ -1,7 +1,7 @@
 package visao;
 
 import java.util.ArrayList;
-
+import java.time.LocalDate;
 import dominio.ClasseProduto;
 import servico.ClasseProdutoServico;
 
@@ -31,4 +31,12 @@ public class ClasseProdutoVisao {
     // System.out.println("Preço: " + alvo.getValor());
     System.out.println("---------------------------------------------");
   }
+
+  public void Criar() {
+    ClasseProduto novo = new ClasseProduto(0, "Teste", LocalDate.now());
+    ClasseProdutoServico srv = new ClasseProdutoServico();
+    srv.Adicionar(novo);
+    Imprimir(novo);
+  }
+
 }
