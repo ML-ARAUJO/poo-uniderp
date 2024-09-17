@@ -1,23 +1,23 @@
 package visao;
 
-import java.util.ArrayList;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import dominio.ClasseProduto;
 import servico.ClasseProdutoServico;
 
 public class ClasseProdutoVisao {
 
   // metodo exibir da Classe produto
+  private ClasseProdutoServico srv;
+
+  public ClasseProdutoVisao() {
+    this.srv = new ClasseProdutoServico();
+  }
 
   public void Exibir() {
-    // ProdutoFakeDB prod = new ProdutoFakeDB();
-    // ArrayList<Produto> lista = prod.getTabela(); // se for CRUD em vez de
-    // repo.Browser > repo.getTabela();
-    ClasseProdutoServico srv = new ClasseProdutoServico();
-    ArrayList<ClasseProduto> lista = srv.Navegar();
+    ArrayList<ClasseProduto> lista = this.srv.Navegar();
     for (ClasseProduto cp : lista) {
       this.Imprimir(cp);
-
     }
 
   }
@@ -27,16 +27,13 @@ public class ClasseProdutoVisao {
     System.out.println("Código da Classe: " + alvo.getCodigo());
     System.out.println("Descrição: " + alvo.getDescricao());
     System.out.println("Data de Inclusão: " + alvo.getDataDeInclusao());
-    // System.out.println("Código do produto: " + alvo.getCodigoSubClasse());
-    // System.out.println("Preço: " + alvo.getValor());
     System.out.println("---------------------------------------------");
   }
 
   public void Criar() {
     ClasseProduto novo = new ClasseProduto(0, "Teste", LocalDate.now());
-    ClasseProdutoServico srv = new ClasseProdutoServico();
-    srv.Adicionar(novo);
-    Imprimir(novo);
+    this.srv.Adicionar(novo);
+    this.Imprimir(novo);
   }
 
 }

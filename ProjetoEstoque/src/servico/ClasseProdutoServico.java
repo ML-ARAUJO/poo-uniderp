@@ -14,27 +14,32 @@ public class ClasseProdutoServico extends BaseServico<ClasseProduto> {
 
   @Override
   public ArrayList<ClasseProduto> Navegar() {
-    return this.repo.Browse();
+    return this.repo.Browse();// ReadAll
   }
 
   @Override
   public ClasseProduto Ler(int chave) {
-    return this.repo.Read(chave);
+    return this.repo.Read(chave);// Read
   }
 
   @Override
   public ClasseProduto Editar(ClasseProduto obj) {
-    return this.repo.Edit(obj);
+    return this.repo.Edit(obj);// Update
   }
 
   @Override
   public ClasseProduto Adicionar(ClasseProduto obj) {
-    return this.repo.Add(obj);
+    return this.repo.Add(obj);// Create
   }
 
   @Override
   public ClasseProduto Deletar(int chave) {
-    return this.repo.Delete(chave);
+    return this.repo.Delete(chave);// Delete
+  }
+
+  public void Criar(ClasseProduto cp) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'Criar'");
   }
 
 }
