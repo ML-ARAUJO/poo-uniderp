@@ -1,7 +1,6 @@
 package visao;
 
 import java.util.ArrayList;
-import java.time.LocalDate;
 import dominio.ClasseProduto;
 import servico.ClasseProdutoServico;
 
