@@ -1,12 +1,12 @@
 package visao;
 
 import java.util.ArrayList;
+import java.time.LocalDate;
 import dominio.ClasseProduto;
 import servico.ClasseProdutoServico;
 
 public class ClasseProdutoVisao {
 
-  // metodo exibir da Classe produto
   private ClasseProdutoServico srv;
 
   public ClasseProdutoVisao() {
