@@ -38,8 +38,7 @@ public class ClasseProdutoServico extends BaseServico<ClasseProduto> {
   }
 
   public void Criar(ClasseProduto cp) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'Criar'");
+
   }
 
 }
