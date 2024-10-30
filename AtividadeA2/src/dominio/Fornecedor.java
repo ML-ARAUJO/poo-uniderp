@@ -7,7 +7,7 @@ public class Fornecedor extends BasePessoa {
   private int codigo;
   private String razaoSocial;
   private String nomeFantasia;
-  private double cnpj;
+  private String cnpj;
   private String email;
   private String telefone;
 
@@ -35,11 +35,11 @@ public class Fornecedor extends BasePessoa {
     this.nomeFantasia = nomeFantasia;
   }
 
-  public double getCnpj() {
+  public String getCnpj() {
     return cnpj;
   }
 
-  public void setCnpj(double cnpj) {
+  public void setCnpj(String cnpj) {
     this.cnpj = cnpj;
   }
 
@@ -64,7 +64,7 @@ public class Fornecedor extends BasePessoa {
   }
 
   public Fornecedor(String endereco, LocalDate dataDeInclusao, int codigo, String razaoSocial, String nomeFantasia,
-      double cnpj, String email, String telefone) {
+      String cnpj, String email, String telefone) {
     super(endereco, dataDeInclusao);
     this.codigo = codigo;
     this.razaoSocial = razaoSocial;
