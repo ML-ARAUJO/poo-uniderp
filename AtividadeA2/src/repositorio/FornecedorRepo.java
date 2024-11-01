@@ -44,7 +44,7 @@ public class FornecedorRepo extends BaseRepositorio<Fornecedor> {
   @Override
   public Fornecedor Delete(int chave) {
     Fornecedor forn = this.Read(chave);
-    if (prod != null) {
+    if (forn != null) {
       this.dados.remove(forn);
       return forn;
     } else {
