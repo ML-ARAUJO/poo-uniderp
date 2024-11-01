@@ -63,9 +63,10 @@ public class Fornecedor extends BasePessoa {
     super();
   }
 
-  public Fornecedor(String endereco, LocalDate dataDeInclusao, int codigo, String razaoSocial, String nomeFantasia,
+  public Fornecedor(String endereco, LocalDate dataDeInclusao, String descricao, int codigo, String razaoSocial,
+      String nomeFantasia,
       String cnpj, String email, String telefone) {
-    super(endereco, dataDeInclusao);
+    super(endereco, dataDeInclusao, descricao);
     this.codigo = codigo;
     this.razaoSocial = razaoSocial;
     this.nomeFantasia = nomeFantasia;

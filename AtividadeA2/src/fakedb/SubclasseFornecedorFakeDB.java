@@ -13,10 +13,10 @@ public class SubclasseFornecedorFakeDB
     if (this.tabela == null) {
       this.tabela = new ArrayList<>();
     }
-    this.tabela.add(new SubclasseFornecedor("Rua dos amigos, 123", LocalDate.now(), 1));
-    this.tabela.add(new SubclasseFornecedor("Rua Norte, 132", LocalDate.now(), 2));
-    this.tabela.add(new SubclasseFornecedor("Rua da Paz, 25", LocalDate.now(), 3));
-    this.tabela.add(new SubclasseFornecedor("Rua Rui Barbosa, 180", LocalDate.now(), 4));
+    this.tabela.add(new SubclasseFornecedor("Rua dos amigos, 123", LocalDate.now(), "Centro", 1));
+    this.tabela.add(new SubclasseFornecedor("Rua Norte, 132", LocalDate.now(), "Regiao Norte", 2));
+    this.tabela.add(new SubclasseFornecedor("Rua da Paz, 25", LocalDate.now(), "Regiao Sul", 3));
+    this.tabela.add(new SubclasseFornecedor("Rua Rui Barbosa, 180", LocalDate.now(), "Regiao Leste", 4));
   }
 
 }

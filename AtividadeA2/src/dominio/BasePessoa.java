@@ -7,6 +7,7 @@ public abstract class BasePessoa {
   // variaveis e atributos
   protected String endereco;
   protected LocalDate dataDeInclusao;
+  protected String descricao;
 
   // propriedades
   public String getEndereco() {
@@ -25,13 +26,22 @@ public abstract class BasePessoa {
     this.dataDeInclusao = dataDeInclusao;
   }
 
+  public String getDescricao() {
+    return descricao;
+  }
+
+  public void setDescricao(String descricao) {
+    this.descricao = descricao;
+  }
+
   // paramentros/construtores
   public BasePessoa() {
   }
 
-  public BasePessoa(String endereco, LocalDate dataDeInclusao) {
+  public BasePessoa(String endereco, LocalDate dataDeInclusao, String descricao) {
     this.endereco = endereco;
     this.dataDeInclusao = dataDeInclusao;
+    this.descricao = descricao;
   }
 
 }

@@ -14,6 +14,7 @@ public class FornecedorFakeDB extends BaseFakeDB<Fornecedor> {
     }
     this.tabela.add(new Fornecedor(
         "Rua dos amigos, 123", LocalDate.now(),
+        "Centro",
         1,
         "Distribuidora de Alimentos Araujo",
         "Distribuidora Araujo",
@@ -23,6 +24,7 @@ public class FornecedorFakeDB extends BaseFakeDB<Fornecedor> {
 
     this.tabela.add(new Fornecedor(
         "Rua Norte, 132", LocalDate.now(),
+        "Regiao Norte",
         2,
         "Distribuidora de Bebidas Pereira",
         "Distribuidora Pereira",
@@ -32,6 +34,7 @@ public class FornecedorFakeDB extends BaseFakeDB<Fornecedor> {
 
     this.tabela.add(new Fornecedor(
         "Rua da Paz", LocalDate.now(),
+        "Regiao Sul",
         3,
         "Distribuidora de Limpeza Silva",
         "Distribuidora Silva",
@@ -41,6 +44,7 @@ public class FornecedorFakeDB extends BaseFakeDB<Fornecedor> {
 
     this.tabela.add(new Fornecedor(
         "Rua Rui Barbosa, 180", LocalDate.now(),
+        "Regiao Leste",
         4,
         "Distribuidora de Carnes Lourenço",
         "Distribuidora Lourenço",
