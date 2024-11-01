@@ -8,8 +8,8 @@ public class ClasseFornecedor extends BasePessoa {
     super();
   }
 
-  public ClasseFornecedor(String endereco, LocalDate dataDeInclusao, String descricao) {
-    super(endereco, dataDeInclusao, descricao);
+  public ClasseFornecedor(int codigo, String endereco, LocalDate dataDeInclusao, String descricao) {
+    super(codigo, endereco, dataDeInclusao, descricao);
   }
 
 }

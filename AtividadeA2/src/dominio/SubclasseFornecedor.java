@@ -17,8 +17,9 @@ public class SubclasseFornecedor extends BasePessoa {
   public SubclasseFornecedor() {
   }
 
-  public SubclasseFornecedor(String endereco, LocalDate dataDeInclusao, String descricao, int codigoClasse) {
-    super(endereco, dataDeInclusao, descricao);
+  public SubclasseFornecedor(int codigo, String endereco, LocalDate dataDeInclusao, String descricao,
+      int codigoClasse) {
+    super(codigo, endereco, dataDeInclusao, descricao);
     this.codigoClasse = codigoClasse;
   }
 
