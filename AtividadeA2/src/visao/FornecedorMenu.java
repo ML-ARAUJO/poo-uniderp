@@ -26,18 +26,20 @@ public class FornecedorMenu extends BaseMenu {
     System.out.println("-----------------------------------------");
   }
 
-  private void ImprimirPorLinha(Fornecedor fn) {
-    String msg = "";
-    msg += "Lista de Fornecedores: ";
-    msg += "Código Fornecedor: " + fn.getCodigoForn() + " | ";
-    msg += "Razão Social: " + fn.getRazaoSocial() + " | ";
-    msg += "Nome Fantasia: " + fn.getNomeFantasia() + " | ";
-    msg += "CNPJ: " + fn.getCnpj() + " | ";
-    msg += "Email: " + fn.getEmail() + " | ";
-    msg += "Telefone: " + fn.getTelefone();
-    System.out.println("-----------------------------------------");
-    System.out.println(msg);
-  }
+  /*
+   * private void ImprimirPorLinha(Fornecedor fn) {
+   * String msg = "";
+   * msg += "Lista de Fornecedores: ";
+   * msg += "Código Fornecedor: " + fn.getCodigoForn() + " | ";
+   * msg += "Razão Social: " + fn.getRazaoSocial() + " | ";
+   * msg += "Nome Fantasia: " + fn.getNomeFantasia() + " | ";
+   * msg += "CNPJ: " + fn.getCnpj() + " | ";
+   * msg += "Email: " + fn.getEmail() + " | ";
+   * msg += "Telefone: " + fn.getTelefone();
+   * System.out.println("-----------------------------------------");
+   * System.out.println(msg);
+   * }
+   */
 
   @Override
   public void ExibirMenu() {
@@ -106,7 +108,7 @@ public class FornecedorMenu extends BaseMenu {
     if (fn != null) {
       this.Imprimir(fn);
     } else {
-      System.out.println(" Fornecedor não encontrado.");
+      System.out.println("Erro - Fornecedor não encontrado.");
     }
 
     System.out.println("Clique <ENTER> para continuar...");
@@ -127,6 +129,8 @@ public class FornecedorMenu extends BaseMenu {
     fn.setDataDeInclusao(LocalDate.now());
     if (this.srv.Adicionar(fn) != null) {
       System.out.println("Fornecedor adicionado com sucesso");
+    } else {
+      System.out.println("Erro - Fornecedor não adicionado");
     }
     System.out.println("Clique <ENTER> para continuar");
     this.scanner.nextLine();
@@ -146,7 +150,7 @@ public class FornecedorMenu extends BaseMenu {
     if (fn != null) {
       this.Imprimir(fn);
     } else {
-      System.out.println("Problema - Fornecedor não encontrado");
+      System.out.println("Erro - Fornecedor não encontrado");
     }
 
   }
@@ -154,6 +158,22 @@ public class FornecedorMenu extends BaseMenu {
   @Override
   public void Remover() {
     Util.LimparConsole();
+    System.out.println("Apagando...");
+
+    System.out.println("Informe o código do Fornecedor: ");
+    int cod = this.scanner.nextInt();
+    Fornecedor fn = this.srv.Ler(cod);
+    if (fn != null) {
+      if (this.srv.Deletar(cod) != null) {
+        System.out.println("Fornecedor excluido com sucesso.");
+      } else {
+        System.out.println("Erro - Fornecedor não excluido.");
+      }
+    } else {
+      System.out.println("Erro - Fornecedor não encontrado");
+    }
+
+    System.out.println("Clique <ENTER> para continuar...");
 
   }
 

@@ -1,37 +1,27 @@
 package visao;
 
-import java.util.ArrayList;
 import java.time.LocalDate;
-import dominio.ClasseFornecedor;
-import servico.ClasseFornecedorServ;
+import java.util.ArrayList;
 
-public class ClasseFornecedorMenu extends BaseMenu {
+import dominio.SubclasseFornecedor;
+import servico.SubclasseFornecedorServ;
 
-  private ClasseFornecedorServ srv;
+public class SubclasseFornecedorMenu extends BaseMenu {
 
-  public ClasseFornecedorMenu() {
+  private SubclasseFornecedorServ srv;
+
+  public SubclasseFornecedorMenu() {
     super();
-    this.srv = new ClasseFornecedorServ();
+    this.srv = new SubclasseFornecedorServ();
   }
 
-  /*
-   * private void Imprimir(ClasseFornecedor cf) {
-   * System.out.println("Classe de Produto");
-   * System.out.println("Código: " + cf.getCodigo());
-   * System.out.println("Endereço: " + cf.getEndereco());
-   * System.out.println("Data de Inclusão: " + cf.getDataDeInclusao());
-   * System.out.println("Descrição: " + cf.getDescricao());
-   * System.out.println("-----------------------------------------");
-   * }
-   */
-
-  private void ImprimirPorLinha(ClasseFornecedor cf) {
+  private void ImprimirPorLinha(SubclasseFornecedor scf) {
     String mensagem = "";
     mensagem += "Classe de Produto: ";
-    mensagem += "Código: " + cf.getCodigo() + " | ";
-    mensagem += "Endereço: " + cf.getEndereco() + " | ";
-    mensagem += "Data de Inclusão: " + cf.getDataDeInclusao() + " | ";
-    mensagem += "Descrição: " + cf.getDescricao();
+    mensagem += "Código: " + scf.getCodigo() + " | ";
+    mensagem += "Endereço: " + scf.getEndereco() + " | ";
+    mensagem += "Data de Inclusão: " + scf.getDataDeInclusao() + " | ";
+    mensagem += "Descrição: " + scf.getDescricao();
     System.out.println(mensagem);
 
   }
@@ -83,9 +73,9 @@ public class ClasseFornecedorMenu extends BaseMenu {
     Util.LimparConsole();
     System.out.println("Listando...");
 
-    ArrayList<ClasseFornecedor> lista = this.srv.Navegar();
-    for (ClasseFornecedor cf : lista) {
-      this.ImprimirPorLinha(cf);
+    ArrayList<SubclasseFornecedor> lista = this.srv.Navegar();
+    for (SubclasseFornecedor scf : lista) {
+      this.ImprimirPorLinha(scf);
     }
 
     System.out.println("Clique <ENTER> para continuar. ");
@@ -101,9 +91,9 @@ public class ClasseFornecedorMenu extends BaseMenu {
     System.out.print("Informe o código da Classe de Produto: ");
     int cod = this.scanner.nextInt();
 
-    ClasseFornecedor cf = this.srv.Ler(cod);
-    if (cf != null) {
-      this.ImprimirPorLinha(cf);
+    SubclasseFornecedor scf = this.srv.Ler(cod);
+    if (scf != null) {
+      this.ImprimirPorLinha(scf);
     } else {
       System.out.println("Problema - Classe de Fornecedor não encontrado");
     }
@@ -120,10 +110,10 @@ public class ClasseFornecedorMenu extends BaseMenu {
 
     System.out.print("Informe a Descrição: ");
     String descricao = this.scanner.next();
-    ClasseFornecedor cf = new ClasseFornecedor();
-    cf.setDescricao(descricao);
-    cf.setDataDeInclusao(LocalDate.now());
-    if (this.srv.Adicionar(cf) != null) {
+    SubclasseFornecedor scf = new SubclasseFornecedor();
+    scf.setDescricao(descricao);
+    scf.setDataDeInclusao(LocalDate.now());
+    if (this.srv.Adicionar(scf) != null) {
       System.out.println("Classe de Fornencedor adicionado com sucesso");
     } else {
       System.out.println("Problema - Erro ao adicionar classe de Fornecedor");
@@ -142,12 +132,12 @@ public class ClasseFornecedorMenu extends BaseMenu {
     System.out.print("Informe o código da Classe de Produto: ");
     int cod = this.scanner.nextInt();
 
-    ClasseFornecedor cf = this.srv.Ler(cod);
-    if (cf != null) {
+    SubclasseFornecedor scf = this.srv.Ler(cod);
+    if (scf != null) {
       System.out.print("Informe a nova Descrição: ");
       String descricao = this.scanner.next();
-      cf.setDescricao(descricao);
-      if (this.srv.Editar(cf) != null) {
+      scf.setDescricao(descricao);
+      if (this.srv.Editar(scf) != null) {
         System.out.println("Alteração realizada com sucesso");
       } else {
         System.out.println("Problema - alteração não foi realizada");
@@ -168,8 +158,8 @@ public class ClasseFornecedorMenu extends BaseMenu {
 
     System.out.print("Informe o código da Classe de Produto: ");
     int cod = this.scanner.nextInt();
-    ClasseFornecedor cf = this.srv.Ler(cod);
-    if (cf != null) {
+    SubclasseFornecedor scf = this.srv.Ler(cod);
+    if (scf != null) {
       if (this.srv.Deletar(cod) != null) {
         System.out.println("Classe de Fornecedor excluida com sucesso");
       } else {
@@ -184,4 +174,5 @@ public class ClasseFornecedorMenu extends BaseMenu {
     this.scanner.nextLine();
 
   }
+
 }
