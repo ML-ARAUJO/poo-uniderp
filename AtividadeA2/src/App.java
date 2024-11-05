@@ -1,5 +1,5 @@
 import visao.ClasseFornecedorMenu;
-import visao.ClasseFornecedorVisao;
+//import visao.ClasseFornecedorVisao;
 
 public class App {
     public static void main(String[] args) throws Exception {
