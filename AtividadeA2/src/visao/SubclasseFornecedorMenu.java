@@ -8,24 +8,28 @@ import servico.SubclasseFornecedorServ;
 
 public class SubclasseFornecedorMenu extends BaseMenu {
 
+  // Serviço para gerenciar as operações relacionadas às classes
   private SubclasseFornecedorServ srv;
 
   public SubclasseFornecedorMenu() {
     super();
-    this.srv = new SubclasseFornecedorServ();
+    this.srv = new SubclasseFornecedorServ();// Inicializa o serviço de fornecedor
   }
 
+  // Método auxiliar para imprimir informações
   private void ImprimirPorLinha(SubclasseFornecedor scf) {
     String mensagem = "";
-    mensagem += "Classe de Produto: ";
+    mensagem += "Subclasse de Fornecedor: ";
     mensagem += "Código: " + scf.getCodigo() + " | ";
     mensagem += "Endereço: " + scf.getEndereco() + " | ";
     mensagem += "Data de Inclusão: " + scf.getDataDeInclusao() + " | ";
     mensagem += "Descrição: " + scf.getDescricao();
+    mensagem += "Codigo SubClasse: " + scf.getCodigoClasse();
     System.out.println(mensagem);
 
   }
 
+  // Método para exibir o menu e capturar a opção
   @Override
   public void ExibirMenu() {
     int opcao = 0;
@@ -68,6 +72,7 @@ public class SubclasseFornecedorMenu extends BaseMenu {
     }
   }
 
+  // Implementação do método apra toda as classes de Subclassefornecedor
   @Override
   public void Listar() {
     Util.LimparConsole();

@@ -8,13 +8,15 @@ import servico.FornecedorServ;
 
 public class FornecedorMenu extends BaseMenu {
 
+  // Serviço para gerenciar as operações relacionadas às classes
   private FornecedorServ srv;
 
   public FornecedorMenu() {
     super();
-    this.srv = new FornecedorServ();
+    this.srv = new FornecedorServ(); // Inicializa o serviço de fornecedor
   }
 
+  // Método auxiliar para imprimir informações
   private void Imprimir(Fornecedor fn) {
     System.out.println("Lista de Fornecedores: ");
     System.out.println("Código Fornecedor: " + fn.getCodigoForn());
@@ -26,21 +28,7 @@ public class FornecedorMenu extends BaseMenu {
     System.out.println("-----------------------------------------");
   }
 
-  /*
-   * private void ImprimirPorLinha(Fornecedor fn) {
-   * String msg = "";
-   * msg += "Lista de Fornecedores: ";
-   * msg += "Código Fornecedor: " + fn.getCodigoForn() + " | ";
-   * msg += "Razão Social: " + fn.getRazaoSocial() + " | ";
-   * msg += "Nome Fantasia: " + fn.getNomeFantasia() + " | ";
-   * msg += "CNPJ: " + fn.getCnpj() + " | ";
-   * msg += "Email: " + fn.getEmail() + " | ";
-   * msg += "Telefone: " + fn.getTelefone();
-   * System.out.println("-----------------------------------------");
-   * System.out.println(msg);
-   * }
-   */
-
+  // Método para exibir o menu e capturar a opção
   @Override
   public void ExibirMenu() {
     int opcao = 0;
@@ -53,7 +41,7 @@ public class FornecedorMenu extends BaseMenu {
       System.out.println("4 - Adicionar");
       System.out.println("5 - Remover");
       System.out.println("9 - Sair");
-      System.out.println("Selecione uma opção: ");
+      System.out.print("Selecione uma opção: ");
       opcao = this.scanner.nextInt();
 
       switch (opcao) {
@@ -83,6 +71,7 @@ public class FornecedorMenu extends BaseMenu {
     }
   }
 
+  // Implementação do método apra toda as classes de fornecedor
   @Override
   public void Listar() {
     Util.LimparConsole();

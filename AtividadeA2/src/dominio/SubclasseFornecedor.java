@@ -21,6 +21,10 @@ public class SubclasseFornecedor extends BasePessoa {
       int codigoClasse) {
     super(codigo, endereco, dataDeInclusao, descricao);
     this.codigoClasse = codigoClasse;
+    this.codigo = codigo;
+    this.endereco = endereco;
+    this.dataDeInclusao = dataDeInclusao;
+    this.descricao = descricao;
   }
 
 }

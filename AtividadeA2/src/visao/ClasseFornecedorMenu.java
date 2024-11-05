@@ -7,24 +7,15 @@ import servico.ClasseFornecedorServ;
 
 public class ClasseFornecedorMenu extends BaseMenu {
 
+  // Serviço para gerenciar as operações relacionadas às classes
   private ClasseFornecedorServ srv;
 
   public ClasseFornecedorMenu() {
     super();
-    this.srv = new ClasseFornecedorServ();
+    this.srv = new ClasseFornecedorServ(); // Inicializa o serviço de fornecedor
   }
 
-  /*
-   * private void Imprimir(ClasseFornecedor cf) {
-   * System.out.println("Classe de Produto");
-   * System.out.println("Código: " + cf.getCodigo());
-   * System.out.println("Endereço: " + cf.getEndereco());
-   * System.out.println("Data de Inclusão: " + cf.getDataDeInclusao());
-   * System.out.println("Descrição: " + cf.getDescricao());
-   * System.out.println("-----------------------------------------");
-   * }
-   */
-
+  // Método auxiliar para imprimir informações
   private void ImprimirPorLinha(ClasseFornecedor cf) {
     String mensagem = "";
     mensagem += "Classe de Produto: ";
@@ -36,6 +27,7 @@ public class ClasseFornecedorMenu extends BaseMenu {
 
   }
 
+  // Método para exibir o menu e capturar a opção
   @Override
   public void ExibirMenu() {
     int opcao = 0;
@@ -78,6 +70,7 @@ public class ClasseFornecedorMenu extends BaseMenu {
     }
   }
 
+  // Implementação do método apra toda as classes de Classefornecedor
   @Override
   public void Listar() {
     Util.LimparConsole();
