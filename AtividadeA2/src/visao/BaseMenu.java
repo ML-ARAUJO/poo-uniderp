@@ -7,9 +7,10 @@ public abstract class BaseMenu {
   protected Scanner scanner;
 
   public BaseMenu() {
-    this.scanner = new Scanner(System.in);
+    this.scanner = new Scanner(System.in);// Inicializa o Scanner para ler do console
   }
 
+  // Métodos abstratos que devem ser implementados pelas subclasses
   public abstract void ExibirMenu();
 
   public abstract void Listar();

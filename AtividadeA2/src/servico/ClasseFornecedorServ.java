@@ -15,27 +15,27 @@ public class ClasseFornecedorServ extends BaseServico<ClasseFornecedor> {
 
   @Override
   public ArrayList<ClasseFornecedor> Navegar() {
-    return this.repo.Browser(); // ReadAll
+    return this.repo.Browser(); // ReadAll - Listar
   }
 
   @Override
   public ClasseFornecedor Ler(int chave) {
-    return this.repo.Read(chave); // Read
+    return this.repo.Read(chave); // Read - Localizar
   }
 
   @Override
   public ClasseFornecedor Editar(ClasseFornecedor obj) {
-    return this.repo.Edit(obj); // Update
+    return this.repo.Edit(obj); // Update - Atualizar
   }
 
   @Override
   public ClasseFornecedor Adicionar(ClasseFornecedor obj) {
-    return this.repo.Add(obj); // Create
+    return this.repo.Add(obj); // Create - Adicionar
   }
 
   @Override
   public ClasseFornecedor Deletar(int chave) {
-    return this.repo.Delete(chave); // delete
+    return this.repo.Delete(chave); // delete - Remover
   }
 
   public void Criar(ClasseFornecedor cf) {

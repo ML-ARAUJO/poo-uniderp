@@ -5,4 +5,5 @@ public abstract class BaseVisao {
   }
 
   public abstract void Exibir();
+
 }

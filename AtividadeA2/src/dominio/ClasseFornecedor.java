@@ -10,6 +10,10 @@ public class ClasseFornecedor extends BasePessoa {
 
   public ClasseFornecedor(int codigo, String endereco, LocalDate dataDeInclusao, String descricao) {
     super(codigo, endereco, dataDeInclusao, descricao);
+    this.codigo = codigo;
+    this.endereco = endereco;
+    this.dataDeInclusao = dataDeInclusao;
+    this.descricao = descricao;
   }
 
 }
