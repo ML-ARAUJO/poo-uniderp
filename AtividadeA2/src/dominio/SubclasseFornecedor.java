@@ -15,16 +15,18 @@ public class SubclasseFornecedor extends BasePessoa {
   }
 
   public SubclasseFornecedor() {
+    super();
   }
 
-  public SubclasseFornecedor(int codigo, String endereco, LocalDate dataDeInclusao, String descricao,
-      int codigoClasse) {
-    super(codigo, endereco, dataDeInclusao, descricao);
+  public SubclasseFornecedor(int id, String endereco, LocalDate dataDeInclusao, String descricao, int codigoClasse) {
+    super(id, endereco, dataDeInclusao, descricao);
     this.codigoClasse = codigoClasse;
-    this.codigo = codigo;
-    this.endereco = endereco;
-    this.dataDeInclusao = dataDeInclusao;
-    this.descricao = descricao;
+  }
+
+  @Override
+  public String toString() {
+    return "SubclasseFornecedor [codigoClasse=" + codigoClasse + ", id=" + id + ", endereco=" + endereco
+        + ", dataDeInclusao=" + dataDeInclusao + ", descricao=" + descricao + "]";
   }
 
 }

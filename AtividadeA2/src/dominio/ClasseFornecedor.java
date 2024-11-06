@@ -8,12 +8,18 @@ public class ClasseFornecedor extends BasePessoa {
     super();
   }
 
-  public ClasseFornecedor(int codigo, String endereco, LocalDate dataDeInclusao, String descricao) {
-    super(codigo, endereco, dataDeInclusao, descricao);
-    this.codigo = codigo;
-    this.endereco = endereco;
-    this.dataDeInclusao = dataDeInclusao;
-    this.descricao = descricao;
+  public ClasseFornecedor(int id, String endereco, LocalDate dataDeInclusao, String descricao) {
+    super(id, endereco, dataDeInclusao, descricao);
+  }
+
+  @Override
+  public String toString() {
+    String msg = "Classe Fornecedor";
+    msg += "\n\tid=" + this.id;
+    msg += "\n\tendereço=" + this.endereco;
+    msg += "\n\tdataDeInclusão=" + this.dataDeInclusao;
+    msg += "\n\tdescrição=" + this.descricao;
+    return msg;
   }
 
 }

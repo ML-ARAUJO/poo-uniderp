@@ -72,7 +72,18 @@ public class Fornecedor extends BasePessoa {
     this.cnpj = cnpj;
     this.email = email;
     this.telefone = telefone;
-    // this.descricao = descricao;
+  }
+
+  @Override
+  public String toString() {
+    return "Fornecedor { " +
+        "codigo=" + codigo +
+        ", razaoSocial=" + razaoSocial +
+        ", nomeFantasia=" + nomeFantasia +
+        ", cnpj=" + cnpj +
+        ", email=" + email +
+        ", telefone=" + telefone +
+        " }";
   }
 
 }
