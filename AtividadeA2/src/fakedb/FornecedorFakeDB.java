@@ -13,20 +13,23 @@ public class FornecedorFakeDB extends BaseFakeDB<Fornecedor> {
       this.tabela = new ArrayList<>();
     }
     this.tabela.add(new Fornecedor(
-        1234,
-        "Rua dos amigos, 123", LocalDate.now(),
-        "Centro",
+        0001,
+        "Rua Centro Oeste, 1000",
+        LocalDate.now(),
+        "Região Norte",
+
         1,
-        "Distribuidora de Alimentos Araujo",
+        "Distribuidora de Alimentos Araujo Ltda",
         "Distribuidora Araujo",
-        "12.345.678.99990/12",
+        "12.345.678.0009/12",
         "daraujo@gmail.com",
-        "3344-2222"));
+        "3333-1010"));
 
     this.tabela.add(new Fornecedor(
-        5678,
+        0002,
         "Rua Norte, 132", LocalDate.now(),
         "Regiao Norte",
+
         2,
         "Distribuidora de Bebidas Pereira",
         "Distribuidora Pereira",
@@ -35,9 +38,10 @@ public class FornecedorFakeDB extends BaseFakeDB<Fornecedor> {
         "3355-4444"));
 
     this.tabela.add(new Fornecedor(
-        9876,
+        0003,
         "Rua da Paz", LocalDate.now(),
         "Regiao Sul",
+
         3,
         "Distribuidora de Limpeza Silva",
         "Distribuidora Silva",
@@ -46,15 +50,20 @@ public class FornecedorFakeDB extends BaseFakeDB<Fornecedor> {
         "3366-5555"));
 
     this.tabela.add(new Fornecedor(
-        5432,
+        0004,
         "Rua Rui Barbosa, 180", LocalDate.now(),
         "Regiao Leste",
+
         4,
         "Distribuidora de Carnes Lourenço",
         "Distribuidora Lourenço",
         "12.345.678.0008/58",
         "dlourenco@gmail.com",
         "3377-2222"));
+  }
+
+  public FornecedorFakeDB() {
+    super();
   }
 
 }

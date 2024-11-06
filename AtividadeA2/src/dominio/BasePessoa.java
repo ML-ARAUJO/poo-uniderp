@@ -5,19 +5,17 @@ import java.time.LocalDate;
 public abstract class BasePessoa {
 
   // variaveis e atributos
-  protected int codigo;
+  protected int id;
   protected String endereco;
   protected LocalDate dataDeInclusao;
   protected String descricao;
 
-  // propriedades
-
-  public int getCodigo() {
-    return codigo;
+  public int getId() {
+    return id;
   }
 
-  public void setCodigo(int codigo) {
-    this.codigo = codigo;
+  public void setId(int id) {
+    this.id = id;
   }
 
   public String getEndereco() {
@@ -44,14 +42,14 @@ public abstract class BasePessoa {
     this.descricao = descricao;
   }
 
-  // construtor/propriedade
+  // propriedades
   public BasePessoa() {
   }
 
-  public BasePessoa(int codigo, String endereco, LocalDate dataDeInclusao, String descricao) {
-    this.codigo = codigo;
+  public BasePessoa(int id, String endereco, LocalDate dataDeInclusao, String descricao) {
+    this.id = id;
+    this.endereco = endereco;
     this.dataDeInclusao = dataDeInclusao;
     this.descricao = descricao;
   }
-
 }

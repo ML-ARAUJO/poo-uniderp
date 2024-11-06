@@ -18,8 +18,8 @@ public class FornecedorMenu extends BaseMenu {
 
   // Método auxiliar para imprimir informações
   private void Imprimir(Fornecedor fn) {
-    System.out.println("Lista de Fornecedores: ");
-    System.out.println("Código Fornecedor: " + fn.getCodigoForn());
+    System.out.println("Fornecedores: ");
+    System.out.println("Código Fornecedor: " + fn.getCodigo());
     System.out.println("Razão Social: " + fn.getRazaoSocial());
     System.out.println("Nome Fantasia: " + fn.getNomeFantasia());
     System.out.println("CNPJ: " + fn.getCnpj());
@@ -75,10 +75,10 @@ public class FornecedorMenu extends BaseMenu {
   @Override
   public void Listar() {
     Util.LimparConsole();
-    System.out.println("Listando...");
 
     ArrayList<Fornecedor> lista = this.srv.Navegar();
     for (Fornecedor fn : lista) {
+      System.out.println("Listando...");
       this.Imprimir(fn);
     }
     System.out.println("Clique <ENTER> para continuar...");
@@ -89,12 +89,12 @@ public class FornecedorMenu extends BaseMenu {
   @Override
   public void Localizar() {
     Util.LimparConsole();
-    System.out.println("Localizando...");
 
-    System.out.println("Informe o código do Fornecedor: ");
+    System.out.print("Informe o código do Fornecedor: ");
     int cod = this.scanner.nextInt();
     Fornecedor fn = this.srv.Ler(cod);
     if (fn != null) {
+      System.out.println("Localizando...");
       this.Imprimir(fn);
     } else {
       System.out.println("Erro - Fornecedor não encontrado.");
@@ -111,10 +111,10 @@ public class FornecedorMenu extends BaseMenu {
 
     System.out.println("Adicionando...");
 
-    System.out.println("Informe a descrição: ");
-    String descricao = this.scanner.next();
+    System.out.print("Informe a descrição: ");
+    String industria = this.scanner.next();
     Fornecedor fn = new Fornecedor();
-    fn.setDescricao(descricao);
+    fn.setNomeFantasia(industria);
     fn.setDataDeInclusao(LocalDate.now());
     if (this.srv.Adicionar(fn) != null) {
       System.out.println("Fornecedor adicionado com sucesso");
@@ -129,19 +129,25 @@ public class FornecedorMenu extends BaseMenu {
   @Override
   public void Atualizar() {
     Util.LimparConsole();
-
     System.out.println("Atualizando...");
-    System.out.println("Informe o código do Fornecedor: ");
 
+    System.out.print("Informe o código do Fornecedor: ");
     int cod = this.scanner.nextInt();
 
     Fornecedor fn = this.srv.Ler(cod);
     if (fn != null) {
-      this.Imprimir(fn);
+      System.out.print("Informe o novo Fornecedor: ");
+      String industria = this.scanner.next();
+      fn.setNomeFantasia(industria);
+      if (this.srv.Editar(fn) != null) {
+        System.out.println("Alteração realizada com sucesso.");
+      } else {
+        System.out.println("Erro -  Alteração não foi realizada.");
+      }
     } else {
       System.out.println("Erro - Fornecedor não encontrado");
     }
-
+    System.out.println("Clique <ENTER> para continuar");
   }
 
   @Override
@@ -149,7 +155,7 @@ public class FornecedorMenu extends BaseMenu {
     Util.LimparConsole();
     System.out.println("Apagando...");
 
-    System.out.println("Informe o código do Fornecedor: ");
+    System.out.print("Informe o código do Fornecedor: ");
     int cod = this.scanner.nextInt();
     Fornecedor fn = this.srv.Ler(cod);
     if (fn != null) {
@@ -163,7 +169,8 @@ public class FornecedorMenu extends BaseMenu {
     }
 
     System.out.println("Clique <ENTER> para continuar...");
-
+    this.scanner.nextLine();
+    this.scanner.nextLine();
   }
 
 }

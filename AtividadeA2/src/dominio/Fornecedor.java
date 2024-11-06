@@ -4,19 +4,19 @@ import java.time.LocalDate;
 
 public class Fornecedor extends BasePessoa {
 
-  protected int codigoForn;
-  protected String razaoSocial;
-  protected String nomeFantasia;
-  protected String cnpj;
-  protected String email;
-  protected String telefone;
+  private int codigo;
+  private String razaoSocial;
+  private String nomeFantasia;
+  private String cnpj;
+  private String email;
+  private String telefone;
 
-  public int getCodigoForn() {
-    return codigoForn;
+  public int getCodigo() {
+    return codigo;
   }
 
-  public void setCodigo(int codigoForn) {
-    this.codigoForn = codigoForn;
+  public void setCodigo(int codigo) {
+    this.codigo = codigo;
   }
 
   public String getRazaoSocial() {
@@ -60,17 +60,19 @@ public class Fornecedor extends BasePessoa {
   }
 
   public Fornecedor() {
-
+    super();
   }
 
-  public Fornecedor(int codigo, String endereco, LocalDate dataDeInclusao, String descricao, int codigoForn,
-      String razaoSocial, String nomeFantasia, String cnpj, String email, String telefone) {
-    this.codigoForn = codigoForn;
+  public Fornecedor(int id, String endereco, LocalDate dataDeInclusao, String descricao, int codigo, String razaoSocial,
+      String nomeFantasia, String cnpj, String email, String telefone) {
+    super(id, endereco, dataDeInclusao, descricao);
+    this.codigo = codigo;
     this.razaoSocial = razaoSocial;
     this.nomeFantasia = nomeFantasia;
     this.cnpj = cnpj;
     this.email = email;
     this.telefone = telefone;
+    // this.descricao = descricao;
   }
 
 }
