@@ -3,7 +3,7 @@ package servico;
 import java.util.ArrayList;
 
 public abstract class BaseServico<TDominio> {
-
+  // ação a ser executada.
   // BREAD - NAVERGAR, LER, EDITAR, ADICIONAR E Deletar
   public abstract ArrayList<TDominio> Navegar();
 
