@@ -14,7 +14,7 @@ public class FornecedorFakeDB extends BaseFakeDB<Fornecedor> {
       this.tabela = new ArrayList<>();
     }
     this.tabela.add(new Fornecedor(
-        1,
+        101,
         "Rua Centro Oeste, 1000",
         LocalDate.now(),
         "Região Norte",
@@ -27,7 +27,7 @@ public class FornecedorFakeDB extends BaseFakeDB<Fornecedor> {
         "3333-1010"));
 
     this.tabela.add(new Fornecedor(
-        2,
+        102,
         "Rua Norte, 132", LocalDate.now(),
         "Regiao Norte",
 
@@ -39,7 +39,7 @@ public class FornecedorFakeDB extends BaseFakeDB<Fornecedor> {
         "3355-4444"));
 
     this.tabela.add(new Fornecedor(
-        3,
+        103,
         "Rua da Paz", LocalDate.now(),
         "Regiao Sul",
 
@@ -51,7 +51,7 @@ public class FornecedorFakeDB extends BaseFakeDB<Fornecedor> {
         "3366-5555"));
 
     this.tabela.add(new Fornecedor(
-        4,
+        104,
         "Rua Rui Barbosa, 180", LocalDate.now(),
         "Regiao Leste",
 
