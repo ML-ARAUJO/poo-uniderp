@@ -6,7 +6,7 @@ import dominio.Fornecedor;
 import repositorio.FornecedorRepo;
 
 public class FornecedorServ extends BaseServico<Fornecedor> {
-
+  // instancia de repositorio para identificar
   private FornecedorRepo repo;
 
   public FornecedorServ() {

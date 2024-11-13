@@ -2,7 +2,9 @@ package visao;
 
 import java.util.Scanner;
 
-public abstract class BaseMenu {
+import dominio.Fornecedor;
+
+public abstract class BaseMenu<TDominio> {
 
   protected Scanner scanner;
 
@@ -13,14 +15,16 @@ public abstract class BaseMenu {
   // Métodos abstratos que devem ser implementados pelas subclasses
   public abstract void ExibirMenu();
 
-  public abstract void Listar();
+  protected abstract void Listar();
 
-  public abstract void Localizar();
+  protected abstract void Localizar();
 
-  public abstract void Adicionar();
+  protected abstract void Adicionar();
 
-  public abstract void Atualizar();
+  protected abstract void Atualizar();
 
-  public abstract void Remover();
+  protected abstract void Remover();
+
+  protected abstract void Imprimir();
 
 }

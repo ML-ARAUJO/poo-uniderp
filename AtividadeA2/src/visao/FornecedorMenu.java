@@ -259,4 +259,10 @@ public class FornecedorMenu extends BaseMenu {
     this.scanner.nextLine();
   }
 
+  @Override
+  protected void Imprimir() {
+    // TODO Auto-generated method stub
+
+  }
+
 }

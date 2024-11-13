@@ -4,7 +4,7 @@ import dominio.Fornecedor;
 import fakedb.FornecedorFakeDB;
 
 public class FornecedorRepo extends BaseRepositorio<Fornecedor> {
-
+  // Instrancia para conhece ser base db;
   private FornecedorFakeDB db;
 
   public FornecedorRepo() {

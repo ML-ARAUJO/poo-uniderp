@@ -9,10 +9,11 @@ public class FornecedorFakeDB extends BaseFakeDB<Fornecedor> {
 
   @Override
   protected void preencherDados() {
-    // this.tabela = new ArrayList<Fornecedor>();
+    // this.tabela = new ArrayList<>();
     if (this.tabela == null) {
-      this.tabela = new ArrayList<>();
+      this.tabela = new ArrayList<>();// Linha principal
     }
+
     this.tabela.add(new Fornecedor(
         101,
         "Rua Centro Oeste, 1000",
@@ -63,6 +64,7 @@ public class FornecedorFakeDB extends BaseFakeDB<Fornecedor> {
         "3377-2222"));
   }
 
+  // para chamar construtor do pai o preencher dados
   public FornecedorFakeDB() {
     super();
   }
