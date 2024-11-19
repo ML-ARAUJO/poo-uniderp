@@ -7,6 +7,7 @@ public class FornecedorRepo extends BaseRepositorio<Fornecedor> {
   // Instrancia para conhece ser base db;
   private FornecedorFakeDB db;
 
+  // construtor
   public FornecedorRepo() {
     this.db = new FornecedorFakeDB();
     this.dados = this.db.getTabela();
