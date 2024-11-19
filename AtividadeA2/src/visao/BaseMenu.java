@@ -2,8 +2,6 @@ package visao;
 
 import java.util.Scanner;
 
-import dominio.Fornecedor;
-
 public abstract class BaseMenu<TDominio> {
 
   protected Scanner scanner;

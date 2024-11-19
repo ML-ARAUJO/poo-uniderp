@@ -2,7 +2,6 @@ package visao;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-
 import dominio.Fornecedor;
 import servico.FornecedorServ;
 
