@@ -18,8 +18,8 @@ public class FornecedorMenu extends BaseMenu {
 
   // Método auxiliar para imprimir informações
   private void Imprimir(Fornecedor fn) {
-    System.out.println("Fornecedores: ");
-    System.out.println("Id Fornecedor: " + fn.getId());
+    System.out.println("Lista de Fornecedores ");
+    // System.out.println("Id Fornecedor: " + fn.getId());
     System.out.println("Endereço: " + fn.getEndereco());
     System.out.println("Descrição(Bairro): " + fn.getDescricao());
     System.out.println("Código Fornecedor: " + fn.getCodigo());
