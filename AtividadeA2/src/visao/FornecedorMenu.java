@@ -2,17 +2,18 @@ package visao;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+
 import dominio.Fornecedor;
 import servico.FornecedorServ;
 
-public class FornecedorMenu extends BaseMenu {
+public class FornecedorMenu extends BaseMenu<Fornecedor> {
 
-  // Serviço para gerenciar as operações relacionadas às classes
   private FornecedorServ srv;
 
   public FornecedorMenu() {
     super();
     this.srv = new FornecedorServ(); // Inicializa o serviço de fornecedor
+
   }
 
   // Método auxiliar para imprimir informações
